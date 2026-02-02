@@ -1,6 +1,6 @@
 import { useAnimateOnScroll } from '@/hooks/useAnimateOnScroll';
 import { Button } from './ui/button';
-import yogaClassImage from '@/assets/yoga-class.jpg';
+import yogaClassImage from '@/assets/yoga-class.webp';
 
 interface YogaClass {
   name: string;
@@ -14,40 +14,46 @@ const Classes = () => {
 
   const classes: YogaClass[] = [
     {
-      name: 'Gentle Flow',
-      level: 'Beginner',
+      name: 'Flujo Suave',
+      level: 'Principiante',
       duration: '60 min',
-      description: 'A calming practice focusing on breath and gentle stretches. Perfect for beginners or those seeking restoration.',
+      description:
+        'Una práctica calmada centrada en la respiración y estiramientos suaves. Perfecta para principiantes o para quienes buscan restauración.',
     },
     {
-      name: 'Vinyasa Flow',
-      level: 'All Levels',
+      name: 'Flujo Vinyasa',
+      level: 'Todos los niveles',
       duration: '75 min',
-      description: 'Dynamic sequences linking breath to movement. Build strength, flexibility, and endurance.',
+      description:
+        'Secuencias dinámicas que conectan respiración y movimiento. Desarrolla fuerza, flexibilidad y resistencia.',
     },
     {
-      name: 'Power Yoga',
-      level: 'Intermediate',
+      name: 'Yoga Power',
+      level: 'Intermedio',
       duration: '60 min',
-      description: 'A vigorous, fitness-based approach to vinyasa-style yoga. Challenge yourself physically and mentally.',
+      description:
+        'Un enfoque vigoroso y orientado al fitness del yoga estilo vinyasa. Desafíate física y mentalmente.',
     },
     {
-      name: 'Yin Yoga',
-      level: 'All Levels',
+      name: 'Yoga Yin',
+      level: 'Todos los niveles',
       duration: '90 min',
-      description: 'Deep stretching with longer holds targeting connective tissues. Cultivate stillness and patience.',
+      description:
+        'Estiramientos profundos con posturas mantenidas durante más tiempo, dirigidas a los tejidos conectivos. Cultiva la quietud y la paciencia.',
     },
     {
-      name: 'Restorative',
-      level: 'All Levels',
+      name: 'Restaurativo',
+      level: 'Todos los niveles',
       duration: '75 min',
-      description: 'Deeply relaxing practice using props for full support. Release tension and restore balance.',
+      description:
+        'Práctica profundamente relajante que utiliza soportes para un apoyo completo. Libera tensión y restaura el equilibrio.',
     },
     {
-      name: 'Meditation',
-      level: 'All Levels',
+      name: 'Meditación',
+      level: 'Todos los niveles',
       duration: '45 min',
-      description: 'Guided meditation sessions to quiet the mind and cultivate inner peace and clarity.',
+      description:
+        'Sesiones de meditación guiada para calmar la mente y cultivar paz interior y claridad.',
     },
   ];
 
@@ -58,20 +64,24 @@ const Classes = () => {
       className="py-24 md:py-32 bg-background"
     >
       <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className={`text-center max-w-2xl mx-auto mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+        {/* Encabezado */}
+        <div
+          className={`text-center max-w-2xl mx-auto mb-16 ${
+            isVisible ? 'animate-fade-up' : 'opacity-0'
+          }`}
+        >
           <span className="text-sm font-sans tracking-[0.3em] uppercase text-accent mb-4 block">
-            Our Offerings
+            Nuestra oferta
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-            Find Your Practice
+            Encuentra tu práctica
           </h2>
           <p className="text-muted-foreground font-sans leading-relaxed">
-            From gentle flows to powerful sequences, discover a class that resonates with your body and soul.
+            Desde flujos suaves hasta secuencias intensas, descubre una clase que conecte con tu cuerpo y tu alma.
           </p>
         </div>
 
-        {/* Classes Grid */}
+        {/* Grid de clases */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {classes.map((yogaClass, index) => (
             <div
@@ -93,32 +103,38 @@ const Classes = () => {
                 {yogaClass.description}
               </p>
               <div className="flex items-center justify-between pt-4 border-t border-border">
-                <span className="text-sm font-sans text-primary">{yogaClass.duration}</span>
+                <span className="text-sm font-sans text-primary">
+                  {yogaClass.duration}
+                </span>
                 <span className="text-sm font-sans text-muted-foreground group-hover:text-accent transition-colors cursor-pointer">
-                  Learn more →
+                  Saber más →
                 </span>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Featured Image */}
-        <div className={`relative rounded-2xl overflow-hidden ${isVisible ? 'animate-scale-in animation-delay-600' : 'opacity-0'}`}>
+        {/* Imagen destacada */}
+        <div
+          className={`relative rounded-2xl overflow-hidden ${
+            isVisible ? 'animate-scale-in animation-delay-600' : 'opacity-0'
+          }`}
+        >
           <img
             src={yogaClassImage}
-            alt="Yoga class in session"
+            alt="Clase de yoga en sesión"
             className="w-full h-64 md:h-96 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-forest/80 to-transparent flex items-center">
             <div className="p-8 md:p-12 max-w-lg">
               <h3 className="text-2xl md:text-3xl font-serif text-primary-foreground mb-4">
-                First Class Free
+                Primera clase gratis
               </h3>
               <p className="text-primary-foreground/80 font-sans mb-6">
-                Experience the Serenity difference. Your first class is on us—no commitment required.
+                Vive la experiencia Puro Pilates. Tu primera clase corre por nuestra cuenta, sin compromiso.
               </p>
               <Button variant="accent" size="lg">
-                Claim Your Free Class
+                Reserva tu clase gratuita
               </Button>
             </div>
           </div>

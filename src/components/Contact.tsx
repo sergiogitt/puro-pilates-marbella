@@ -8,23 +8,23 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: MapPin,
-      label: 'Location',
-      value: '123 Serenity Lane, Peaceful Valley, CA 94102',
+      label: 'Ubicación',
+      value: 'Avenida Juan Vargas, San Pedro de Alcántara Marbella',
     },
     {
       icon: Phone,
-      label: 'Phone',
-      value: '(555) 123-4567',
+      label: 'Teléfono',
+      value: '644059931',
     },
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@serenityyoga.com',
+      value: 'puropilates@hotmail.es',
     },
     {
       icon: Clock,
-      label: 'Hours',
-      value: 'Daily 6am - 9pm',
+      label: 'Horario',
+      value: 'De lunes a viernes de 10:00 a 20:00',
     },
   ];
 
@@ -36,63 +36,71 @@ const Contact = () => {
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16">
-          {/* Contact Info */}
+          {/* Información de contacto */}
           <div className={`${isVisible ? 'animate-slide-left' : 'opacity-0'}`}>
             <span className="text-sm font-sans tracking-[0.3em] uppercase text-accent mb-4 block">
-              Get in Touch
+              Contacta con nosotros
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-              Begin Your Journey
-              <span className="text-primary block">Today</span>
+              Comienza tu camino
+              <span className="text-primary block">hoy</span>
             </h2>
             <p className="text-muted-foreground font-sans leading-relaxed mb-10">
-              Ready to transform your practice? We'd love to hear from you. 
-              Stop by the studio, give us a call, or send us a message.
+              ¿Listo para transformar tu práctica? Nos encantará saber de ti.
+              Ven al estudio, llámanos o envíanos un mensaje.
             </p>
 
             <div className="grid gap-6">
               {contactInfo.map((info, index) => (
                 <div
                   key={info.label}
-                  className={`flex items-start gap-4 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
+                  className={`flex items-start gap-4 ${
+                    isVisible ? 'animate-fade-up' : 'opacity-0'
+                  }`}
                   style={{ animationDelay: `${(index + 2) * 100}ms` }}
                 >
                   <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center flex-shrink-0">
                     <info.icon size={20} className="text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-sans text-muted-foreground mb-1">{info.label}</p>
-                    <p className="font-sans text-foreground">{info.value}</p>
+                    <p className="text-sm font-sans text-muted-foreground mb-1">
+                      {info.label}
+                    </p>
+                    <p className="font-sans text-foreground">
+                      {info.value}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Formulario de contacto */}
           <div className={`${isVisible ? 'animate-slide-right' : 'opacity-0'}`}>
             <div className="glass-card rounded-2xl p-8 md:p-10">
-              <h3 className="text-2xl font-serif text-foreground mb-6">Send a Message</h3>
+              <h3 className="text-2xl font-serif text-foreground mb-6">
+                Enviar un mensaje
+              </h3>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-sans text-muted-foreground mb-2 block">
-                      First Name
+                      Nombre
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-sans"
-                      placeholder="Maya"
+                      placeholder="Maria"
                     />
                   </div>
                   <div>
                     <label className="text-sm font-sans text-muted-foreground mb-2 block">
-                      Last Name
+                      Apellidos
                     </label>
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-sans"
-                      placeholder="Chen"
+                      placeholder="Lopez"
                     />
                   </div>
                 </div>
@@ -103,21 +111,21 @@ const Contact = () => {
                   <input
                     type="email"
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-sans"
-                    placeholder="maya@example.com"
+                    placeholder="maria.lopez@example.com"
                   />
                 </div>
                 <div>
                   <label className="text-sm font-sans text-muted-foreground mb-2 block">
-                    Message
+                    Mensaje
                   </label>
                   <textarea
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all font-sans resize-none"
-                    placeholder="I'm interested in..."
+                    placeholder="Estoy interesado en..."
                   />
                 </div>
                 <Button variant="hero" size="xl" className="w-full">
-                  Send Message
+                  Enviar mensaje
                 </Button>
               </form>
             </div>

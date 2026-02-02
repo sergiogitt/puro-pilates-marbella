@@ -7,15 +7,15 @@ const About = () => {
   const values = [
     {
       title: 'Mindfulness',
-      description: 'Cultivate awareness and presence in every breath and movement.',
+      description: 'Cultiva la conciencia y la presencia en cada respiración y movimiento.',
     },
     {
-      title: 'Community',
-      description: 'Join a supportive space where everyone belongs and grows together.',
+      title: 'Comunidad',
+      description: 'Forma parte de un espacio de apoyo donde todos pertenecen y crecen juntos.',
     },
     {
-      title: 'Balance',
-      description: 'Harmonize body, mind, and spirit through holistic practice.',
+      title: 'Equilibrio',
+      description: 'Armoniza cuerpo, mente y espíritu a través de una práctica holística.',
     },
   ];
 
@@ -27,44 +27,46 @@ const About = () => {
     >
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Image */}
+          {/* Imagen */}
           <div className={`relative ${isVisible ? 'animate-slide-left' : 'opacity-0'}`}>
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
               <img
                 src={meditationImage}
-                alt="Meditation and tranquility"
+                alt="Meditación y tranquilidad"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest/20 to-transparent" />
             </div>
-            {/* Floating Card */}
+            {/* Tarjeta flotante */}
             <div className="absolute -bottom-6 -right-6 md:right-8 bg-background rounded-xl p-6 shadow-lg animate-float">
               <p className="text-3xl font-serif text-primary mb-1">15+</p>
-              <p className="text-sm font-sans text-muted-foreground">Years of Experience</p>
+              <p className="text-sm font-sans text-muted-foreground">
+                Años de experiencia
+              </p>
             </div>
           </div>
 
-          {/* Content */}
+          {/* Contenido */}
           <div className={`${isVisible ? 'animate-slide-right' : 'opacity-0'}`}>
             <span className="text-sm font-sans tracking-[0.3em] uppercase text-accent mb-4 block">
-              Our Philosophy
+              Nuestra filosofía
             </span>
             <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6 leading-tight">
-              Where Tranquility
-              <span className="text-primary block">Meets Movement</span>
+              Donde la tranquilidad
+              <span className="text-primary block">se encuentra con el movimiento</span>
             </h2>
             <p className="text-muted-foreground font-sans leading-relaxed mb-8">
-              At Serenity Yoga, we believe that yoga is more than just physical exercise—it's a journey 
-              inward. Our studio provides a sanctuary where you can disconnect from the chaos of daily 
-              life and reconnect with your true self.
+              En Puro Pilates creemos que el yoga es mucho más que ejercicio físico:
+              es un viaje hacia el interior. Nuestro estudio ofrece un santuario donde
+              puedes desconectar del caos de la vida diaria y reconectar con tu verdadero ser.
             </p>
             <p className="text-muted-foreground font-sans leading-relaxed mb-10">
-              Whether you're taking your first downward dog or you've been practicing for decades, 
-              our experienced instructors meet you exactly where you are, guiding you with patience, 
-              wisdom, and compassion.
+              Tanto si estás haciendo tu primer perro boca abajo como si llevas décadas
+              practicando, nuestros instructores experimentados te acompañan exactamente
+              desde donde te encuentras, guiándote con paciencia, sabiduría y compasión.
             </p>
 
-            {/* Values */}
+            {/* Valores */}
             <div className="grid gap-6">
               {values.map((value, index) => (
                 <div
@@ -74,8 +76,12 @@ const About = () => {
                 >
                   <div className="w-1 bg-primary rounded-full" />
                   <div>
-                    <h3 className="font-serif text-lg text-foreground mb-1">{value.title}</h3>
-                    <p className="text-sm text-muted-foreground font-sans">{value.description}</p>
+                    <h3 className="font-serif text-lg text-foreground mb-1">
+                      {value.title}
+                    </h3>
+                    <p className="text-sm text-muted-foreground font-sans">
+                      {value.description}
+                    </p>
                   </div>
                 </div>
               ))}

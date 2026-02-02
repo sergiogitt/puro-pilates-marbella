@@ -12,21 +12,21 @@ const Instructors = () => {
 
   const instructors: Instructor[] = [
     {
-      name: 'Maya Chen',
-      specialty: 'Vinyasa & Meditation',
-      bio: 'With a background in dance and 12 years of yoga practice, Maya brings fluidity and mindfulness to every class.',
+      name: 'Maria Gomez',
+      specialty: 'Vinyasa y Meditación',
+      bio: 'Con formación en danza y 12 años de práctica de yoga, Maya aporta fluidez y atención plena a cada clase.',
       years: 12,
     },
     {
-      name: 'James Rivera',
-      specialty: 'Power Yoga & Ashtanga',
-      bio: 'A former athlete, James discovered yoga for recovery and now helps others build strength with intention.',
+      name: 'Juan Rivera',
+      specialty: 'Power Yoga y Ashtanga',
+      bio: 'Exatleta, James descubrió el yoga como método de recuperación y ahora ayuda a otros a desarrollar fuerza con intención.',
       years: 8,
     },
     {
-      name: 'Leila Patel',
-      specialty: 'Yin & Restorative',
-      bio: 'Leila specializes in therapeutic practices, creating space for deep healing and relaxation.',
+      name: 'Laura Mesa',
+      specialty: 'Yin y Restaurativo',
+      bio: 'Leila se especializa en prácticas terapéuticas, creando un espacio para la sanación profunda y la relajación.',
       years: 15,
     },
   ];
@@ -38,28 +38,35 @@ const Instructors = () => {
       className="py-24 md:py-32 bg-sage-light"
     >
       <div className="container mx-auto px-6">
-        {/* Header */}
-        <div className={`text-center max-w-2xl mx-auto mb-16 ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}>
+        {/* Encabezado */}
+        <div
+          className={`text-center max-w-2xl mx-auto mb-16 ${
+            isVisible ? 'animate-fade-up' : 'opacity-0'
+          }`}
+        >
           <span className="text-sm font-sans tracking-[0.3em] uppercase text-accent mb-4 block">
-            Meet Our Team
+            Conoce a nuestro equipo
           </span>
           <h2 className="text-4xl md:text-5xl font-serif text-foreground mb-6">
-            Guided by Expertise
+            Guiados por la experiencia
           </h2>
           <p className="text-muted-foreground font-sans leading-relaxed">
-            Our certified instructors bring decades of combined experience, each with their unique gifts and specialties.
+            Nuestros instructores certificados aportan décadas de experiencia combinada,
+            cada uno con sus dones y especialidades únicas.
           </p>
         </div>
 
-        {/* Instructors Grid */}
+        {/* Grid de instructores */}
         <div className="grid md:grid-cols-3 gap-8">
           {instructors.map((instructor, index) => (
             <div
               key={instructor.name}
-              className={`group text-center ${isVisible ? 'animate-fade-up' : 'opacity-0'}`}
+              className={`group text-center ${
+                isVisible ? 'animate-fade-up' : 'opacity-0'
+              }`}
               style={{ animationDelay: `${(index + 1) * 150}ms` }}
             >
-              {/* Avatar Placeholder */}
+              {/* Avatar */}
               <div className="relative w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden bg-muted">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-6xl font-serif text-primary/30">
@@ -72,12 +79,14 @@ const Instructors = () => {
               <h3 className="text-xl font-serif text-foreground mb-2 group-hover:text-primary transition-colors">
                 {instructor.name}
               </h3>
-              <p className="text-sm font-sans text-accent mb-3">{instructor.specialty}</p>
+              <p className="text-sm font-sans text-accent mb-3">
+                {instructor.specialty}
+              </p>
               <p className="text-sm text-muted-foreground font-sans leading-relaxed mb-4 max-w-xs mx-auto">
                 {instructor.bio}
               </p>
               <span className="inline-block text-xs font-sans bg-background px-4 py-2 rounded-full text-muted-foreground">
-                {instructor.years}+ years experience
+                {instructor.years}+ años de experiencia
               </span>
             </div>
           ))}

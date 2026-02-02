@@ -6,11 +6,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Classes', href: '#classes' },
-    { label: 'About', href: '#about' },
-    { label: 'Instructors', href: '#instructors' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Clases', href: '#classes' },
+    { label: 'Sobre Nosotros', href: '#about' },
+    { label: 'Instructores', href: '#instructors' },
+    { label: 'Contacto', href: '#contact' },
   ];
+
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -19,10 +20,10 @@ const Header = () => {
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
             <span className="text-2xl font-serif font-semibold text-primary">
-              Serenity
+              Puro
             </span>
             <span className="text-sm font-sans text-muted-foreground tracking-widest uppercase">
-              Yoga
+              Pilates
             </span>
           </a>
 
@@ -42,7 +43,7 @@ const Header = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="hero" size="lg">
-              Book a Class
+              Reservar Clase
             </Button>
           </div>
 
@@ -71,7 +72,7 @@ const Header = () => {
                 </a>
               ))}
               <Button variant="hero" size="lg" className="mt-4 w-full">
-                Book a Class
+                Reservar Clase
               </Button>
             </div>
           </nav>
