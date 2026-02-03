@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  base: "https://sergiogitt.github.io/puro-pilates-marbella",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
