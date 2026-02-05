@@ -14,19 +14,19 @@ const Instructors = () => {
     {
       name: 'Maria Gomez',
       specialty: 'Vinyasa y Meditación',
-      bio: 'Con formación en danza y 12 años de práctica de yoga, Maya aporta fluidez y atención plena a cada clase.',
+      bio: 'Con formación en danza y 12 años de práctica de yoga, Maria aporta fluidez y atención plena a cada clase.',
       years: 12,
     },
     {
       name: 'Juan Rivera',
       specialty: 'Power Yoga y Ashtanga',
-      bio: 'Exatleta, James descubrió el yoga como método de recuperación y ahora ayuda a otros a desarrollar fuerza con intención.',
+      bio: 'Exatleta, Juan descubrió el yoga como método de recuperación y ahora ayuda a otros a desarrollar fuerza con intención.',
       years: 8,
     },
     {
       name: 'Laura Mesa',
       specialty: 'Yin y Restaurativo',
-      bio: 'Leila se especializa en prácticas terapéuticas, creando un espacio para la sanación profunda y la relajación.',
+      bio: 'Laura se especializa en prácticas terapéuticas, creando un espacio para la sanación profunda y la relajación.',
       years: 15,
     },
   ];
